@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Heavenly Arinda's Bakery | Gallery</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* Gallery Section */
+    .gallery-section {
+      padding: 50px 20px;
+      background-color: #f8f8f8;
+      text-align: center;
+    }
+
+    .gallery-section h2 {
+      font-family: "Times New Roman", serif;
+      font-size: 2.5em;
+      color: #0044cc;
+      margin-bottom: 15px;
+    }
+
+    .gallery-section p {
+      font-size: 1.2em;
+      width: 80%;
+      margin: 0 auto 40px;
+      color: #333;
+    }
+
+    /* Grid for gallery */
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      width: 90%;
+      margin: auto;
+    }
+
+    .gallery-item {
+      position: relative;
+      overflow: hidden;
+      border-radius: 20px;
+      cursor: pointer;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.3s;
+    }
+
+    .gallery-item:hover img {
+      transform: scale(1.05);
+    }
+
+    .gallery-caption {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background: rgba(0,0,0,0.6);
+      color: white;
+      padding: 10px;
+      font-size: 1em;
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+
+    .gallery-item:hover .gallery-caption {
+      opacity: 1;
+    }
+
+    /* Lightbox */
+    .lightbox {
+      display: none;
+      position: fixed;
+      z-index: 999;
+      padding: 40px;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.9);
+      align-items: center;
+      justify-content: center;
+    }
+
+    .lightbox img {
+      max-width: 90%;
+      max-height: 80%;
+      border-radius: 20px;
+    }
+
+    .lightbox:target {
+      display: flex;
+    }
+  </style>
+</head>
+<body>
+  <header class="top-section">
+    <h1>HEAVENLY ARINDA'S BAKERY</h1>
+    <nav class="top-nav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="gallery.html" class="active">Gallery</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="gallery-section">
+    <h2>Gallery</h2>
+    <p>Discover the heart and soul of Heavenly Arinda’s Bakery through our gallery. From handcrafted cakes and pastries to freshly baked breads, every image tells a story of passion, creativity, and deliciousness. Browse through our collection and get inspired for your next celebration!</p>
+
+    <div class="gallery-grid">
+      <a href="#img-a" class="gallery-item">
+        <img src="images/a.jpg" alt="Signature Chocolate Cake">
+        <div class="gallery-caption">Signature Chocolate Cake</div>
+      </a>
+      <a href="#img-b" class="gallery-item">
+        <img src="images/b.jpg" alt="Freshly Baked Croissants">
+        <div class="gallery-caption">Freshly Baked Croissants</div>
+      </a>
+      <a href="#img-c" class="gallery-item">
+        <img src="images/c.jpg" alt="Birthday Cake Design">
+        <div class="gallery-caption">Birthday Cake Design</div>
+      </a>
+      <a href="#img-d" class="gallery-item">
+        <img src="images/d.jpg" alt="Assorted Cookies Box">
+        <div class="gallery-caption">Assorted Cookies Box</div>
+      </a>
+      <a href="#img-e" class="gallery-item">
+        <img src="images/e.jpg" alt="Pastry Platter">
+        <div class="gallery-caption">Pastry Platter</div>
+      </a>
+      <a href="#img-f" class="gallery-item">
+        <img src="images/f.jpg" alt="Whole Wheat Bread">
+        <div class="gallery-caption">Whole Wheat Bread</div>
+      </a>
+      <a href="#img-g" class="gallery-item">
+        <img src="images/g.jpg" alt="Wedding Cake">
+        <div class="gallery-caption">Wedding Cake</div>
+      </a>
+      <a href="#img-h" class="gallery-item">
+        <img src="images/h.jpg" alt="Cupcake Set">
+        <div class="gallery-caption">Cupcake Set</div>
+      </a>
+      <a href="#img-i" class="gallery-item">
+        <img src="images/i.jpg" alt="Holiday Special Cake">
+        <div class="gallery-caption">Holiday Special Cake</div>
+      </a>
+      <a href="#img-j" class="gallery-item">
+        <img src="images/j.jpg" alt="Mini Cake Set">
+        <div class="gallery-caption">Mini Cake Set</div>
+      </a>
+      <a href="#img-k" class="gallery-item">
+        <img src="images/k.jpg" alt="Brownies & Muffins">
+        <div class="gallery-caption">Brownies & Muffins</div>
+      </a>
+      <a href="#img-l" class="gallery-item">
+        <img src="images/l.jpg" alt="Baguettes & Brioche">
+        <div class="gallery-caption">Baguettes & Brioche</div>
+      </a>
+      <a href="#img-m" class="gallery-item">
+        <img src="images/m.jpg" alt="Inside the Bakery">
+        <div class="gallery-caption">Inside the Bakery</div>
+      </a>
+      <a href="#img-n" class="gallery-item">
+        <img src="images/n.jpg" alt="Seasonal Featured Treat">
+        <div class="gallery-caption">Seasonal Featured Treat</div>
+      </a>
+    </div>
+
+    <!-- Lightbox Sections -->
+    <div id="img-a" class="lightbox"><a href="#"><img src="images/a.jpg" alt="Signature Chocolate Cake"></a></div>
+    <div id="img-b" class="lightbox"><a href="#"><img src="images/b.jpg" alt="Freshly Baked Croissants"></a></div>
+    <div id="img-c" class="lightbox"><a href="#"><img src="images/c.jpg" alt="Birthday Cake Design"></a></div>
+    <div id="img-d" class="lightbox"><a href="#"><img src="images/d.jpg" alt="Assorted Cookies Box"></a></div>
+    <div id="img-e" class="lightbox"><a href="#"><img src="images/e.jpg" alt="Pastry Platter"></a></div>
+    <div id="img-f" class="lightbox"><a href="#"><img src="images/f.jpg" alt="Whole Wheat Bread"></a></div>
+    <div id="img-g" class="lightbox"><a href="#"><img src="images/g.jpg" alt="Wedding Cake"></a></div>
+    <div id="img-h" class="lightbox"><a href="#"><img src="images/h.jpg" alt="Cupcake Set"></a></div>
+    <div id="img-i" class="lightbox"><a href="#"><img src="images/i.jpg" alt="Holiday Special Cake"></a></div>
+    <div id="img-j" class="lightbox"><a href="#"><img src="images/j.jpg" alt="Mini Cake Set"></a></div>
+    <div id="img-k" class="lightbox"><a href="#"><img src="images/k.jpg" alt="Brownies & Muffins"></a></div>
+    <div id="img-l" class="lightbox"><a href="#"><img src="images/l.jpg" alt="Baguettes & Brioche"></a></div>
+    <div id="img-m" class="lightbox"><a href="#"><img src="images/m.jpg" alt="Inside the Bakery"></a></div>
+    <div id="img-n" class="lightbox"><a href="#"><img src="images/n.jpg" alt="Seasonal Featured Treat"></a></div>
+  </section>
+
+  <footer class="bottom-section">
+    <p> Heavenly Arinda’s Bakery.</p>
+  </footer>
+</body>
+</html>

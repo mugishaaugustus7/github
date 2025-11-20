@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Heavenly Arinda's Bakery | Products</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* Products Page Styling */
+    .products-section {
+      padding: 50px 20px;
+      background-color: #f8f8f8;
+      text-align: center;
+    }
+
+    .products-section h2 {
+      font-family: "Times New Roman", serif;
+      font-size: 2.5em;
+      color: #0044cc;
+      margin-bottom: 15px;
+    }
+
+    .products-section p {
+      font-size: 1.2em;
+      width: 80%;
+      margin: 0 auto 40px;
+      color: #333;
+    }
+
+    /* Product Grid */
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+      width: 90%;
+      margin: auto;
+    }
+
+    .product-item {
+      background-color: white;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+      position: relative;
+    }
+
+    .product-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    }
+
+    .product-item img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-bottom: 1px solid #ccc;
+    }
+
+    .product-content {
+      padding: 15px;
+      text-align: left;
+    }
+
+    .product-content h3 {
+      margin: 10px 0;
+      color: #0044cc;
+      font-family: "Times New Roman", serif;
+    }
+
+    .product-content p {
+      margin: 0 0 10px;
+      font-size: 1em;
+      color: #333;
+    }
+
+    .order-btn {
+      display: inline-block;
+      padding: 8px 15px;
+      background-color: #0044cc;
+      color: white;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background-color 0.3s;
+    }
+
+    .order-btn:hover {
+      background-color: #003399;
+    }
+  </style>
+</head>
+<body>
+  <header class="top-section">
+    <h1>HEAVENLY ARINDA'S BAKERY</h1>
+    <nav class="top-nav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="products.html" class="active">Products</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="products-section">
+    <h2>Our Products</h2>
+    <p>At Heavenly Arinda’s Bakery, every product is baked with love, care, and the finest ingredients. Explore our wide range of cakes, pastries, breads, and treats — perfect for any celebration or a delightful everyday indulgence.</p>
+
+    <div class="product-grid">
+      <!-- Cakes -->
+      <div class="product-item">
+        <img src="images/j.jpg" alt="Birthday Cake">
+        <div class="product-content">
+          <h3>Birthday Cakes</h3>
+          <p>Custom flavors including chocolate, vanilla, and red velvet — perfect for birthdays.</p>
+          <a href="contact.html" class="order-btn">Contact to Order</a>
+        </div>
+      </div>
+
+      <div class="product-item">
+        <img src="images/n.jpg" alt="Seasonal Special Cake">
+        <div class="product-content">
+          <h3>Seasonal & Featured Items</h3>
+          <p>Holiday cakes, festive pastries, and chef’s specials — exclusive creations available for a limited time.</p>
+          <a href="contact.html" class="order-btn">Contact to Order</a>
+        </div>
+      </div>
+
+      <div class="product-item">
+        <img src="images/k.jpg" alt="Brownies & Muffins">
+        <div class="product-content">
+          <h3>Pastries & Desserts</h3>
+          <p>Croissants, muffins, cupcakes, brownies, and more — freshly baked and irresistible.</p>
+          <a href="contact.html" class="order-btn">Contact to Order</a>
+        </div>
+      </div>
+
+      <!-- Additional Products (Text only, you can add images later) -->
+      <div class="product-item">
+        <img src="images/l.jpg" alt="Breads">
+        <div class="product-content">
+          <h3>Breads</h3>
+          <p>White bread, whole wheat, baguettes, brioche, and specialty loaves — freshly baked daily.</p>
+          <a href="contact.html" class="order-btn">Contact to Order</a>
+        </div>
+      </div>
+
+      <div class="product-item">
+        <img src="images/ff.jpg" alt="Beverages">
+        <div class="product-content">
+          <h3>Beverages</h3>
+          <p>Coffee, tea, hot chocolate, and fresh juices to complement your treats.</p>
+          <a href="contact.html" class="order-btn">Contact to Order</a>
+        </div>
+      </div>
+
+      <div class="product-item">
+        <img src="images/d.jpg" alt="Gift Boxes">
+        <div class="product-content">
+          <h3>Gift Boxes & Hampers</h3>
+          <p>Assorted cookies, mini cake sets, and curated hampers — perfect for gifting.</p>
+          <a href="contact.html" class="order-btn">Contact to Order</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="bottom-section">
+    <p>Heavenly Arinda’s Bakery.</p>
+  </footer>
+</body>
+</html>
